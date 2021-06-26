@@ -1,0 +1,21 @@
+
+
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+
+{% for object in object_list %}
+
+
+<li><a href='/email/{{ object.id}}/'>{{object.id}} - {{object.email}}</a></li>
+
+<a href='/email/{{ object.id}}/destroy/'>Destroy</a>
+
+{% endfor %}
+   
+{% endblock%}
+
+
+
+
